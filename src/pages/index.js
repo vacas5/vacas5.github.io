@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
 import Bio from '../components/Bio'
+import '../sass/main.scss'
 
 class BlogIndex extends React.Component {
   render() {
@@ -11,25 +12,36 @@ class BlogIndex extends React.Component {
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (
-      <div>
-        <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
-        <Bio />
-        {posts.map(post => {
-          if (post.node.path !== '/404/') {
-            const title = get(post, 'node.frontmatter.title') || post.node.path
-            return (
-              <div key={post.node.frontmatter.path}>
-                <h3>
-                  <Link to={post.node.frontmatter.path} >
-                    {post.node.frontmatter.title}
-                  </Link>
-                </h3>
-                <small>{post.node.frontmatter.date}</small>
-                <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
-              </div>
-            )
-          }
-        })}
+      <div className="container">
+        <Helmet title={get(this, 'props.data.site.siteMetadata.title')}>
+          <link rel="icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/RJA-Badge.png" />
+          <meta property="og:title" content={this.props.data.site.siteMetadata.title} />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={this.props.data.site.siteMetadata.url} />
+          <meta property="og:image" content="https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/sitecap.jpg" />
+        </Helmet>
+        <div className="content">
+          <h2 className="subtitle">Posts</h2>
+          {posts.map(post => {
+            if (post.node.path !== '/404/') {
+              const title = get(post, 'node.frontmatter.title') || post.node.path
+              return (
+                <div key={post.node.frontmatter.path}>
+                  <h3 className="status">
+                    <Link to={post.node.frontmatter.path} >
+                      {post.node.frontmatter.title}
+                    </Link>
+                  </h3>
+                  <small>{post.node.frontmatter.date}</small>
+                  <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
+                </div>
+              )
+            }
+          })}
+        </div>
+        <div className="positions">
+          <Bio />
+        </div>
       </div>
     )
   }
@@ -46,6 +58,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        url
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

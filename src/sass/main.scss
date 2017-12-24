@@ -1,0 +1,129 @@
+@import "normalize";
+@import "bourbon/bourbon";
+@import "base/variables";
+// Neat Settings -- uncomment if using Neat -- must be imported before Neat
+@import "base/grid-settings";
+
+$medium-screen-up: new-breakpoint(min-width $medium-screen);
+$large-screen-up: new-breakpoint(min-width $large-screen);
+
+@import "base/buttons";
+//@import "forms";
+@import "base/lists";
+//@import "tables";
+@import "base/typography";
+
+@import "neat/neat";
+
+.blue {
+    color: $blue;
+}
+
+body {
+    background-color: $base-background-color;
+    // @include media($medium-screen-up) {
+    //     background-image: url(https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/sea.jpg);
+    //     background-position: center center;
+    //     background-size: cover;
+    //     background-repeat: no-repeat;
+    // }
+}
+
+.wrapper {
+    @include outer-container;
+}
+
+.container {
+    @include span-columns(12);
+    background-color: $white;
+    padding: 2rem;
+    @include media(min-width 68em) {
+        margin-bottom: 6rem;
+        border-radius: rem(4);
+    }
+}
+
+.content {
+    @include media($large-screen-up) {
+        @include span-columns(5);
+    }
+}
+
+.positions {
+    @include media($large-screen-up) {
+        @include span-columns(5);
+        @include shift(1);
+    }
+}
+
+.show_wrapper {
+    position: relative;
+    @include media($large-screen-up) {
+        @include span-columns(10);
+        @include shift(1);
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+.title {
+    font-size: 2rem;
+    padding: 2rem;
+    margin-bottom: 0.5rem;
+    color: $white;
+    @include span-columns(12);
+    @include media($medium-screen-up) {
+        font-size: 3rem;
+        text-shadow: 2px 2px 2px rgba(0,0,0,0.7);
+    }
+    @include media(min-width 68em) {
+        padding-left: 0;
+    }
+    a {
+        color: $white;
+    }
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: $blue;
+    margin-bottom: 3rem;
+}
+
+.main_quote {
+    border-left: 4px solid $green;
+    padding-left: 1rem;
+    margin:0 1rem 3rem;
+    @include media($medium-screen-up) {
+        margin: 0 rem(40) 3rem;
+    }
+}
+
+.status {
+    font-size: 1.25rem;
+    font-weight: normal;
+    color: $blue;
+    margin-top: 3rem;
+}
+
+.role {
+    padding-left: 1rem;
+    h4 {
+        margin: 1rem 0 rem(4);
+    }
+}
+
+.description {
+    font-size: 14px;
+}
+
+.contact {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.button, html .button {
+    @extend #{$all-buttons};
+}

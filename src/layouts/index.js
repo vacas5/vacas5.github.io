@@ -7,23 +7,23 @@ class Template extends React.Component {
     let header
     if (location.pathname === '/') {
       header = (
-        <h1>
+        <h1 className="title">
           <Link to={'/'} >
-            Gatsby Starter Blog
+            Russell J. Anderson
           </Link>
         </h1>
       )
     } else {
       header = (
-        <h3>
+        <h3 className="title">
           <Link to={'/'}>
-            Gatsby Starter Blog
+            Russell J. Anderson
           </Link>
         </h3>
       )
     }
     return (
-      <div>
+      <div className="wrapper">
         {header}
         {children()}
       </div>
