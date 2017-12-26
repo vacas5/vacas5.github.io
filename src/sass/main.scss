@@ -15,43 +15,57 @@ $large-screen-up: new-breakpoint(min-width $large-screen);
 
 @import "neat/neat";
 
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:400,400i,700,700i');
+
 .blue {
     color: $blue;
 }
 
 body {
     background-color: $base-background-color;
-    // @include media($medium-screen-up) {
-    //     background-image: url(https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/sea.jpg);
-    //     background-position: center center;
-    //     background-size: cover;
-    //     background-repeat: no-repeat;
-    // }
 }
 
 .wrapper {
     @include outer-container;
 }
 
+.banner {
+    @include media($medium-screen-up) {
+        padding-top: 35%;
+        background-image: url(https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/sea.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
 .container {
     @include span-columns(12);
     background-color: $white;
     padding: 2rem;
-    @include media(min-width 68em) {
-        margin-bottom: 6rem;
-        border-radius: rem(4);
+}
+
+.header_wrapper {
+    @include media($large-screen-up) {
+        @include span-columns(3);
+    }
+}
+
+.content_wrapper {
+    @include media($large-screen-up) {
+        @include span-columns(9);
     }
 }
 
 .content {
     @include media($large-screen-up) {
-        @include span-columns(5);
+        @include span-columns(7);
     }
 }
 
 .positions {
     @include media($large-screen-up) {
-        @include span-columns(5);
+        @include span-columns(4);
         @include shift(1);
     }
 }
@@ -65,6 +79,20 @@ body {
     img {
         max-width: 100%;
     }
+}
+
+.bio {
+    font-size: 0.85rem;
+    p {
+        margin-bottom: 2rem;
+    }
+}
+
+.bio-pic {
+    width: 150px;
+    border-radius: 30%;
+    margin: 0 auto;
+    display: block;
 }
 
 .title {
@@ -86,7 +114,7 @@ body {
 }
 
 .subtitle {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: normal;
     color: $blue;
     margin-bottom: 3rem;

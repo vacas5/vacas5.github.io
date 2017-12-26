@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
 
 class Template extends React.Component {
   render() {
@@ -23,9 +24,17 @@ class Template extends React.Component {
       )
     }
     return (
-      <div className="wrapper">
-        {header}
-        {children()}
+      <div className="">
+          <Helmet>
+            <link rel="icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/RJA-Badge.png" />
+          </Helmet>
+          <div className="banner"></div>
+          <div className="header_wrapper">
+              {header}
+          </div>
+          <div className="content_wrapper">
+              {children()}
+          </div>
       </div>
     )
   }

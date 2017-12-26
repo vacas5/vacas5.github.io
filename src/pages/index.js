@@ -14,7 +14,6 @@ class BlogIndex extends React.Component {
     return (
       <div className="container">
         <Helmet title={get(this, 'props.data.site.siteMetadata.title')}>
-          <link rel="icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/RJA-Badge.png" />
           <meta property="og:title" content={this.props.data.site.siteMetadata.title} />
           <meta property="og:type" content="website" />
           <meta property="og:url" content={this.props.data.site.siteMetadata.url} />
