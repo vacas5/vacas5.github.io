@@ -9,13 +9,17 @@ $large-screen-up: new-breakpoint(min-width $large-screen);
 
 @import "base/buttons";
 //@import "forms";
-@import "base/lists";
+//@import "base/lists";
 //@import "tables";
 @import "base/typography";
 
 @import "neat/neat";
 
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:400,400i,700,700i');
+
+li > p {
+    margin-bottom: 0;
+}
 
 .blue {
     color: $blue;
@@ -41,8 +45,7 @@ body {
 
 .container {
     @include span-columns(12);
-    background-color: $white;
-    padding: 2rem;
+
 }
 
 .header_wrapper {
@@ -52,6 +55,8 @@ body {
 }
 
 .content_wrapper {
+    background-color: $white;
+    padding: 2rem;
     @include media($large-screen-up) {
         @include span-columns(9);
     }
@@ -120,7 +125,7 @@ body {
     margin-bottom: 3rem;
 }
 
-.main_quote {
+blockquote {
     border-left: 4px solid $green;
     padding-left: 1rem;
     margin:0 1rem 3rem;
@@ -154,4 +159,30 @@ body {
 
 .button, html .button {
     @extend #{$all-buttons};
+}
+
+// Posts
+
+.blog_post {
+    h1 {
+        @extend .subtitle;
+    }
+    h2 {
+        @extend .status;
+        font-size: 1.5rem;
+    }
+    h3 {
+        @extend .status;
+    }
+    h4 {
+        @extend .status;
+        font-size: 1.125rem;
+    }
+    h5, h6 {
+        @extend .status;
+        font-size: 1rem;
+    }
+    p {
+        text-align: justify;
+    }
 }

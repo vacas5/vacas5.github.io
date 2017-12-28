@@ -3,23 +3,19 @@ import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 
-import Bio from '../components/Bio'
-
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     return (
-      <div>
+      <div className="blog_post">
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
         <h1>{post.frontmatter.title}</h1>
-        <p>
-          {post.frontmatter.date}
+        <p className="date_line">
+          <em>{post.frontmatter.date}</em>
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
-        <Bio />
       </div>
     )
   }

@@ -2,6 +2,9 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
+import '../sass/main.scss'
+import Bio from '../components/Bio'
+
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
@@ -33,7 +36,12 @@ class Template extends React.Component {
               {header}
           </div>
           <div className="content_wrapper">
-              {children()}
+              <div className="content">
+                  {children()}
+              </div>
+              <div className="positions">
+                <Bio />
+              </div>
           </div>
       </div>
     )
