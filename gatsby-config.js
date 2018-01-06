@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter Blog",
-    author: "Kyle Mathews",
+    title: "Russell J. Anderson, Web Developer",
+    author: "Russell J. Anderson",
+    url: "http://russelljanderson.com",
   },
   plugins: [
     {
@@ -43,5 +44,11 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        precision: 8,
+      },
+    },
   ],
 }

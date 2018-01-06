@@ -1,5 +1,9 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
+
+import '../sass/main.scss'
+import Bio from '../components/Bio'
 
 class Template extends React.Component {
   render() {
@@ -7,25 +11,38 @@ class Template extends React.Component {
     let header
     if (location.pathname === '/') {
       header = (
-        <h1>
+        <h1 className="title">
           <Link to={'/'} >
-            Gatsby Starter Blog
+            Russell J. Anderson
           </Link>
         </h1>
       )
     } else {
       header = (
-        <h3>
+        <h3 className="title">
           <Link to={'/'}>
-            Gatsby Starter Blog
+            Russell J. Anderson
           </Link>
         </h3>
       )
     }
     return (
-      <div>
-        {header}
-        {children()}
+      <div className="">
+          <Helmet>
+            <link rel="icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/RJA-Badge.png" />
+          </Helmet>
+          <div className="banner"></div>
+          <div className="header_wrapper">
+              {header}
+          </div>
+          <div className="content_wrapper">
+              <div className="content">
+                  {children()}
+              </div>
+              <div className="positions">
+                <Bio />
+              </div>
+          </div>
       </div>
     )
   }
