@@ -49,6 +49,7 @@ body {
 }
 
 .header_wrapper {
+    overflow: hidden;
     @include media($large-screen-up) {
         @include span-columns(3);
     }
@@ -63,6 +64,7 @@ body {
 }
 
 .content {
+    margin-bottom: 3rem;
     @include media($large-screen-up) {
         @include span-columns(7);
     }
@@ -108,10 +110,6 @@ body {
     @include span-columns(12);
     @include media($medium-screen-up) {
         font-size: 3rem;
-        text-shadow: 2px 2px 2px rgba(0,0,0,0.7);
-    }
-    @include media(min-width 68em) {
-        padding-left: 0;
     }
     a {
         color: $white;
