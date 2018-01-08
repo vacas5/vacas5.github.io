@@ -4,6 +4,9 @@ import Helmet from 'react-helmet'
 
 import '../sass/main.scss'
 import Bio from '../components/Bio'
+import twitter from './icon_Twitter-White.png'
+import linkedIn from './linkedin-icon_white.png'
+import gitHub from './white-github-512.png'
 
 class Template extends React.Component {
   render() {
@@ -34,6 +37,17 @@ class Template extends React.Component {
           <div className="banner"></div>
           <div className="header_wrapper">
               {header}
+              <div className="social_icons">
+                  <a href="https://twitter.com/RealRealRuss">
+                      <img src={twitter} alt="Twitter logo" />
+                  </a>
+                  <a href="https://www.linkedin.com/in/russelljanderson">
+                      <img src={linkedIn} alt="LinkedIn logo" />
+                  </a>
+                  <a href="https://github.com/vacas5" className="github">
+                      <img src={gitHub} alt="Octocat" />
+                  </a>
+              </div>
           </div>
           <div className="content_wrapper">
               <div className="content">
