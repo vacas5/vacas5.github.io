@@ -1,11 +1,8 @@
 {
-  "name": "gatsby-starter-blog-no-styles",
-  "description": "Starter Gatsby Blog No Styles",
+  "name": "personal-blog",
+  "description": "Russell J Anderson's personal blog",
   "version": "1.0.0",
-  "author": "Noah Glusenkamp <noah.glusenkamp@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
-  },
+  "author": "Russell Anderson <russelljanderson@yahoo.com>",
   "dependencies": {
     "gatsby": "^1.8.12",
     "gatsby-link": "^1.6.8",
@@ -30,7 +27,7 @@
     "gh-pages": "^0.12.0",
     "prettier": "^1.6.1"
   },
-  "homepage": "https://github.com/noahg/gatsby-starter-blog-no-styles#readme",
+  "homepage": "https://russelljanderson.com",
   "keywords": [
     "gatsby"
   ],
@@ -38,7 +35,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/noahg/gatsby-starter-blog-no-styles.git"
+    "url": "git+https://github.com/vacas5/blog"
   },
   "scripts": {
     "dev": "gatsby develop",
