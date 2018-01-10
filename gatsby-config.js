@@ -6,6 +6,7 @@ module.exports = {
     title: "Russell J. Anderson, Web Developer",
     author: "Russell J. Anderson",
     url: "http://russelljanderson.com",
+    description: "A blog on web development, product development, javascript, python, React, Django, et al",
   },
   plugins: [
     {
