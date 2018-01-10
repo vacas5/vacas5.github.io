@@ -1,3 +1,6 @@
+const dotenv = require('dotenv')
+dotenv.config()
+
 module.exports = {
   siteMetadata: {
     title: "Russell J. Anderson, Web Developer",
@@ -39,7 +42,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-112148101-1`,
+        trackingId: `${process.env.GOOGLE_ANALYTICS_ID}`,
       },
     },
     `gatsby-plugin-offline`,
