@@ -35,7 +35,7 @@ body {
 
 .banner {
     @include media($medium-screen-up) {
-        padding-top: 35%;
+        padding-top: 30%;
         background-image: url(https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/sea.jpg);
         background-position: center center;
         background-size: cover;
