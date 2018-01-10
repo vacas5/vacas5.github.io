@@ -1,0 +1,52 @@
+{
+  "assetsByChunkName": {
+    "path---choosing-gatsby": [
+      "path---choosing-gatsby-db98e30bd8cd4cc84c37.js",
+      "path---choosing-gatsby-db98e30bd8cd4cc84c37.js.map"
+    ],
+    "path---tricky-git-scenarios-one": [
+      "path---tricky-git-scenarios-one-0348eed1dde5cf3c8ceb.js",
+      "path---tricky-git-scenarios-one-0348eed1dde5cf3c8ceb.js.map"
+    ],
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-94ceb65d87fa3f10265c.js",
+      "component---src-pages-index-js-94ceb65d87fa3f10265c.js.map"
+    ],
+    "path---": [
+      "path----557518bd178906f8d58a.js",
+      "path----557518bd178906f8d58a.js.map"
+    ],
+    "component---node-modules-gatsby-plugin-offline-app-shell-js": [
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
+    ],
+    "component---src-templates-blog-post-js": [
+      "component---src-templates-blog-post-js-a50c1661bca2466c9999.js",
+      "component---src-templates-blog-post-js-a50c1661bca2466c9999.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-fd3e62c1e2379ba677cc.js",
+      "component---src-layouts-index-js-fd3e62c1e2379ba677cc.js.map"
+    ],
+    "path---index": [
+      "path---index-daf007445a15825e28e8.js",
+      "path---index-daf007445a15825e28e8.js.map"
+    ],
+    "commons": [
+      "commons-f1ef510847f79fa0a799.js",
+      "commons-f1ef510847f79fa0a799.js.map"
+    ],
+    "path---offline-plugin-app-shell-fallback": [
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "app": [
+      "app-8d78ebc0d692bee3d00e.js",
+      "app-8d78ebc0d692bee3d00e.js.map"
+    ],
+    "path---conference-talks": [
+      "path---conference-talks-c1547cf2107f7cdde377.js",
+      "path---conference-talks-c1547cf2107f7cdde377.js.map"
+    ]
+  }
+}
