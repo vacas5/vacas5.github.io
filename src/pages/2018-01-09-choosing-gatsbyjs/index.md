@@ -93,7 +93,7 @@ One cool thing, as mentioned above, is that if you already have a WordPress site
 
 ###External scripts
 
-One gotcha I ran into specifically was trying to use a third-party script on our site. This doesn't surprise me at all. Third party scripts pretty much suck in general, because you didn't write them and you have no idea the assumptions they are making. In our case, the script was assuming a document load event to happen on every page. But with Gatsby, it's one big react app. The load happens once (which is awesome).
+One gotcha I ran into specifically was trying to use a third-party script on our site. This doesn't surprise me at all. Third party scripts can be tough to deal with in general, because you didn't write them and you have no idea the assumptions they are making. In our case, the script was assuming a document load event to happen on every page. But with Gatsby, it's one big react app. The load only happens once (which is awesome).
 
 I fiddled with the script quite a bit to finally get it to work.
 
