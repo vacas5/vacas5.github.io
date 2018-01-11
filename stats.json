@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "path---choosing-gatsby": [
-      "path---choosing-gatsby-db98e30bd8cd4cc84c37.js",
-      "path---choosing-gatsby-db98e30bd8cd4cc84c37.js.map"
+      "path---choosing-gatsby-9b59c37acb9c23b287fd.js",
+      "path---choosing-gatsby-9b59c37acb9c23b287fd.js.map"
     ],
     "path---tricky-git-scenarios-one": [
       "path---tricky-git-scenarios-one-0348eed1dde5cf3c8ceb.js",
@@ -41,8 +41,8 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-8d78ebc0d692bee3d00e.js",
-      "app-8d78ebc0d692bee3d00e.js.map"
+      "app-ff2b541c8aa6cd00de35.js",
+      "app-ff2b541c8aa6cd00de35.js.map"
     ],
     "path---conference-talks": [
       "path---conference-talks-c1547cf2107f7cdde377.js",
