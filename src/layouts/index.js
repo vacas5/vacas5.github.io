@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 
 import '../sass/main.scss'
 import Bio from '../components/Bio'
@@ -9,6 +10,31 @@ import linkedIn from './linkedin-icon_white.png'
 import gitHub from './white-github-512.png'
 
 class Template extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            bannerStyle: {
+                backgroundImage: `url(https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/nashjs-january.jpeg)`
+            }
+        }
+    }
+
+    static childContextTypes = {
+        changeBanner: PropTypes.func
+    }
+
+    getChildContext() {
+        return {
+            changeBanner: (url) => {
+                this.setState({
+                    bannerStyle: {
+                        backgroundImage: `url(${url})`
+                    }
+                });
+            }
+        }
+    }
+
   render() {
     const { location, children } = this.props
     let header
@@ -33,8 +59,12 @@ class Template extends React.Component {
       <div className="">
           <Helmet>
             <link rel="icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/RJA-Badge.png" />
+            <meta property="og:type" content="website" />
+            <meta property="og:site_name" content="Russell J. Anderson" />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:site" content="@simplyagree" />
           </Helmet>
-          <div className="banner"></div>
+          <div className="banner" style={this.state.bannerStyle}></div>
           <div className="header_wrapper">
               {header}
               <div className="social_icons">

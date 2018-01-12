@@ -2,6 +2,7 @@
 title: Choosing Gatsby JS
 date: "2018-01-09T23:46:37.121Z"
 path: "/choosing-gatsby/"
+unsplash: 'GnY_mW1Q6Xc'
 ---
 
 Recently the team at [SimplyAgree](https://simplyagree.com) wanted to get serious about thought leadership in the legal tech space. For us, there are serious opportunities to move ideas forward because for better or worse, attorneys and firms are often slow to adopt software to help their process. Therefore, to provide this content we needed a blog. So it was up to me and the rest of the development team to make that happen.

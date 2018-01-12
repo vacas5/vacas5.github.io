@@ -2,6 +2,7 @@
 title: Tricky Git Scenarios Volume One
 date: "2018-01-06"
 path: "/tricky-git-scenarios-one/"
+unsplash: 'geNNFqfvw48'
 ---
 
 ##Moving work to another branch

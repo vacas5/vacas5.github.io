@@ -2,19 +2,28 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 
 class BlogIndex extends React.Component {
+    constructor(props, context) {
+        super(props);
+
+        context.changeBanner("https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/nashjs-january.jpeg");
+    }
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const siteMetadata = get(this, 'props.data.site.siteMetadata')
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (
       <div>
-        <Helmet title={get(this, 'props.data.site.siteMetadata.title')}>
-          <meta property="og:title" content={this.props.data.site.siteMetadata.title} />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content={this.props.data.site.siteMetadata.url} />
+        <Helmet>
+          <meta name="description" content={siteMetadata.description} />
+          <meta property="og:title" content={siteMetadata.title} />
+          <meta name="og:description" content={siteMetadata.description} />
+          <meta property="og:url" content={siteMetadata.url} />
           <meta property="og:image" content="https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/sitecap.jpg" />
+          <meta name="twitter:image" content="https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/sitecap.jpg" />
+          <meta name="twitter:image:alt" content={siteMetadata.title} />
         </Helmet>
         <h2 className="subtitle">Posts</h2>
         {posts.map(post => {
@@ -39,7 +48,11 @@ class BlogIndex extends React.Component {
 }
 
 BlogIndex.propTypes = {
-  route: React.PropTypes.object,
+  route: PropTypes.object,
+}
+
+BlogIndex.contextTypes = {
+    changeBanner: PropTypes.func
 }
 
 export default BlogIndex
@@ -50,6 +63,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         url
+        description
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
