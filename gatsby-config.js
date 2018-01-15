@@ -54,5 +54,14 @@ module.exports = {
         precision: 8,
       },
     },
+    {
+      resolve: `gatsby-source-unsplash`,
+      options: {
+        appId: `${process.env.UNSPLASH_APP_ID}`,
+        collections: [
+          `1578508`
+        ]
+      },
+    },
   ],
 }
