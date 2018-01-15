@@ -26,6 +26,9 @@ class BlogPostTemplate extends React.Component {
             <meta name="twitter:image" content={unsplashPhoto.urls.small} />
             <meta name="twitter:image:alt" content={siteMetadata.title} />
         </Helmet>
+        <div className="mobile_photo">
+            <img src={unsplashPhoto.urls.regular} alt={unsplashPhoto.description} />
+        </div>
         <p className="photo_credit">
             <small>
                 <em>Photo by <a href={unsplashPhoto.user.links.html}>{unsplashPhoto.user.name}</a> from the fine service <a href="http://unsplash.com">Unsplash</a>.</em>

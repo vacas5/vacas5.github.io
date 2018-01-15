@@ -65,17 +65,19 @@ body {
 
 .header_wrapper {
     overflow: hidden;
-    padding: 2rem;
+    padding: 1rem 2rem;
     @include media($large-screen-up) {
+        padding: 2rem;
         @include span-columns(3);
     }
 }
 
 .content_wrapper {
     background-color: $white;
-    padding: 2rem;
+    padding: 1rem;
     @include media($large-screen-up) {
         @include span-columns(9);
+        padding: 2rem;
     }
 }
 
@@ -172,6 +174,13 @@ blockquote {
     @extend #{$all-buttons};
 }
 
+.mobile_photo {
+    margin: -1rem -1rem 0;
+    @include media($medium-screen-up) {
+        display: none;
+    }
+}
+
 // Posts
 
 .blog_post {
@@ -198,7 +207,9 @@ blockquote {
     }
     p.photo_credit {
         text-align: left;
-        margin-top: -1.5rem;
         margin-bottom: 2rem;
+        @include media($large-screen-up) {
+            margin-top: -1.5rem;
+        }
     }
 }
