@@ -5,6 +5,8 @@ path: "/tricky-git-scenarios-one/"
 unsplash: 'geNNFqfvw48'
 ---
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Being awesome at github is, by itself, probably worth $50k/year.</p>&mdash; kevin moore (@kevinMrr) <a href="https://twitter.com/kevinMrr/status/390629841961091072?ref_src=twsrc%5Etfw">October 17, 2013</a></blockquote>
+
 ##Moving work to another branch
 
 Often times I find myself in the following scenario: I am working on a feature branch, deep down in the weeds, but I notice a separate bug. Usually this bug is minor and annoying, and would take me all of five minutes to resolve. Instinctively I fix such a minor thing that already has my attention and move on to continuing the primary task at hand.
