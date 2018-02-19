@@ -141,9 +141,9 @@ body {
 blockquote {
     border-left: 4px solid $green;
     padding-left: 1rem;
-    margin:0 1rem 3rem;
+    margin: 0 1rem 0.75rem;
     @include media($medium-screen-up) {
-        margin: 0 rem(40) 3rem;
+        margin: 0 rem(40) 0.75rem;
     }
 }
 
