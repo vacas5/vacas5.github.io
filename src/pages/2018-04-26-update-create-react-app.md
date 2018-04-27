@@ -1,7 +1,7 @@
 ---
 title: Updating an ejected Create React App
 date: "2018-04-26T22:40:32.169Z"
-path: "/updating-creat-react-app/"
+path: "/updating-create-react-app/"
 unsplash: 'CrnPTz6f-tE'
 ---
 
