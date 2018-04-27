@@ -16,10 +16,6 @@
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
     ],
-    "path---updating-creat-react-app": [
-      "path---updating-creat-react-app-6f66262a79e7a80809de.js",
-      "path---updating-creat-react-app-6f66262a79e7a80809de.js.map"
-    ],
     "component---node-modules-gatsby-plugin-offline-app-shell-js": [
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
@@ -32,9 +28,13 @@
       "component---src-layouts-index-js-7360e4aa729de5e6d506.js",
       "component---src-layouts-index-js-7360e4aa729de5e6d506.js.map"
     ],
+    "path---updating-create-react-app": [
+      "path---updating-create-react-app-37fcb5a3bc49eb90c6c0.js",
+      "path---updating-create-react-app-37fcb5a3bc49eb90c6c0.js.map"
+    ],
     "path---index": [
-      "path---index-7b00dba247378f1e2c1c.js",
-      "path---index-7b00dba247378f1e2c1c.js.map"
+      "path---index-9c68046334dcd8a1a76f.js",
+      "path---index-9c68046334dcd8a1a76f.js.map"
     ],
     "commons": [
       "commons-37e7ec241aad23eaba66.js",
@@ -45,8 +45,8 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-91fb36f4ab8f28d535ca.js",
-      "app-91fb36f4ab8f28d535ca.js.map"
+      "app-38050c3757e9581170ec.js",
+      "app-38050c3757e9581170ec.js.map"
     ],
     "path---ambiguous-requirements": [
       "path---ambiguous-requirements-d76d3fbeb84408a44311.js",
