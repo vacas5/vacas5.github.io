@@ -5,7 +5,9 @@ const select = require(`unist-util-select`)
 const fs = require(`fs-extra`)
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+  const { createPage, createRedirect } = boundActionCreators
+
+  createRedirect({ fromPath: '/marvel', toPath: 'http://marvel.russelljanderson.com' })
 
   return new Promise((resolve, reject) => {
     const pages = []
@@ -38,7 +40,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             path: edge.node.frontmatter.path,
             component: blogPost,
             context: {
-              path: edge.node.frontmatter.path,
+              slug: edge.node.frontmatter.path,
               unsplash: edge.node.frontmatter.unsplash || ''
             },
           })

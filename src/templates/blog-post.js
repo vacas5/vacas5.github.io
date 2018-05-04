@@ -51,14 +51,14 @@ BlogPostTemplate.contextTypes = {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!, $unsplash: String!) {
+  query BlogPostByPath($slug: String!, $unsplash: String!) {
     site {
       siteMetadata {
         title
         author
       }
     }
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(frontmatter: { path: { eq: $slug } }) {
       id
       html
       frontmatter {
