@@ -65,5 +65,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-twitter`,
+    `gatsby-plugin-meta-redirect` // make sure to put last in array
   ],
 }
