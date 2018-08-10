@@ -1,16 +1,20 @@
 {
   "assetsByChunkName": {
     "path---choosing-gatsby": [
-      "path---choosing-gatsby-5c7d2890e4c66b04f84d.js",
-      "path---choosing-gatsby-5c7d2890e4c66b04f84d.js.map"
+      "path---choosing-gatsby-e544bc9ae00156f17876.js",
+      "path---choosing-gatsby-e544bc9ae00156f17876.js.map"
     ],
     "path---tricky-git-scenarios-one": [
-      "path---tricky-git-scenarios-one-be8f9c28a8b0eec26951.js",
-      "path---tricky-git-scenarios-one-be8f9c28a8b0eec26951.js.map"
+      "path---tricky-git-scenarios-one-bcdd0594af58c62e1922.js",
+      "path---tricky-git-scenarios-one-bcdd0594af58c62e1922.js.map"
+    ],
+    "path---redesign-your-workflow": [
+      "path---redesign-your-workflow-d9ad93be82830a2c9974.js",
+      "path---redesign-your-workflow-d9ad93be82830a2c9974.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-a0058c14b5c2f915f608.js",
-      "component---src-pages-index-js-a0058c14b5c2f915f608.js.map"
+      "component---src-pages-index-js-a9223e0556049f634c41.js",
+      "component---src-pages-index-js-a9223e0556049f634c41.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -21,40 +25,40 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "component---src-templates-blog-post-js": [
-      "component---src-templates-blog-post-js-dec304e653716433aadc.js",
-      "component---src-templates-blog-post-js-dec304e653716433aadc.js.map"
+      "component---src-templates-blog-post-js-9e4222d46b75fcb5d1e3.js",
+      "component---src-templates-blog-post-js-9e4222d46b75fcb5d1e3.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-7360e4aa729de5e6d506.js",
-      "component---src-layouts-index-js-7360e4aa729de5e6d506.js.map"
+      "component---src-layouts-index-js-3ea748f6b694f6034293.js",
+      "component---src-layouts-index-js-3ea748f6b694f6034293.js.map"
     ],
     "path---updating-create-react-app": [
-      "path---updating-create-react-app-596f6a3807eb90976449.js",
-      "path---updating-create-react-app-596f6a3807eb90976449.js.map"
+      "path---updating-create-react-app-7b401856402f3546c000.js",
+      "path---updating-create-react-app-7b401856402f3546c000.js.map"
     ],
     "path---index": [
-      "path---index-9c68046334dcd8a1a76f.js",
-      "path---index-9c68046334dcd8a1a76f.js.map"
+      "path---index-32143d6e93102631adaf.js",
+      "path---index-32143d6e93102631adaf.js.map"
     ],
     "commons": [
-      "commons-37e7ec241aad23eaba66.js",
-      "commons-37e7ec241aad23eaba66.js.map"
+      "commons-dba118d00f3290b3a2ba.js",
+      "commons-dba118d00f3290b3a2ba.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-1bd3749c01823bb86e1b.js",
-      "app-1bd3749c01823bb86e1b.js.map"
+      "app-413883ca8b4ad37d9521.js",
+      "app-413883ca8b4ad37d9521.js.map"
     ],
     "path---ambiguous-requirements": [
-      "path---ambiguous-requirements-0f64f8f9ba52c468bbf1.js",
-      "path---ambiguous-requirements-0f64f8f9ba52c468bbf1.js.map"
+      "path---ambiguous-requirements-daa3a16bbae3245c5a06.js",
+      "path---ambiguous-requirements-daa3a16bbae3245c5a06.js.map"
     ],
     "path---conference-talks": [
-      "path---conference-talks-71316afeb8e7997bc078.js",
-      "path---conference-talks-71316afeb8e7997bc078.js.map"
+      "path---conference-talks-a503504c777ebfbe2b8e.js",
+      "path---conference-talks-a503504c777ebfbe2b8e.js.map"
     ]
   }
 }
