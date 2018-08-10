@@ -6,7 +6,7 @@ class Bio extends React.Component {
         <div className="bio">
             <p>
                 <img className="bio-pic"
-                  src={`https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAbLAAAAJGNmMDNlY2E2LWFjZTYtNDk4OC1hMDY4LTZjY2Y3NDFkNDg5Yg.jpg`}
+                  src={`https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/bear.jpg`}
                   alt={`Russell J. Anderson`}
                 />
             </p>

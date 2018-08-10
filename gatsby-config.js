@@ -61,7 +61,8 @@ module.exports = {
         appId: `${process.env.UNSPLASH_APP_ID}`,
         collections: [
           `1578508`
-        ]
+        ],
+        perPage: `50`
       },
     },
     `gatsby-plugin-twitter`,
