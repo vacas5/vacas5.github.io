@@ -5,32 +5,37 @@
   "author": "Russell Anderson <russelljanderson@yahoo.com>",
   "dependencies": {
     "dotenv": "^4.0.0",
-    "gatsby": "^1.9.277",
-    "gatsby-link": "^1.6.46",
-    "gatsby-plugin-google-analytics": "^1.0.31",
-    "gatsby-plugin-manifest": "^1.0.27",
-    "gatsby-plugin-meta-redirect": "^1.1.0",
-    "gatsby-plugin-offline": "^1.0.18",
-    "gatsby-plugin-preact": "^1.0.17",
-    "gatsby-plugin-react-helmet": "^1.0.3",
-    "gatsby-plugin-sass": "^1.0.26",
-    "gatsby-plugin-sharp": "^1.6.48",
-    "gatsby-plugin-twitter": "^1.0.20",
-    "gatsby-remark-autolink-headers": "^1.4.19",
-    "gatsby-remark-copy-linked-files": "^1.5.37",
-    "gatsby-remark-images": "^1.5.67",
-    "gatsby-remark-prismjs": "^1.2.24",
-    "gatsby-remark-responsive-iframe": "^1.4.20",
-    "gatsby-remark-smartypants": "^1.4.3",
-    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby": "^2.1.2",
+    "gatsby-link": "^2.0.10",
+    "gatsby-plugin-google-analytics": "^2.0.13",
+    "gatsby-plugin-manifest": "^2.0.17",
+    "gatsby-plugin-meta-redirect": "^1.1.1",
+    "gatsby-plugin-offline": "^2.0.23",
+    "gatsby-plugin-preact": "^2.0.9",
+    "gatsby-plugin-react-helmet": "^3.0.6",
+    "gatsby-plugin-sass": "^2.0.10",
+    "gatsby-plugin-sharp": "^2.0.20",
+    "gatsby-plugin-twitter": "^2.0.9",
+    "gatsby-remark-autolink-headers": "^2.0.14",
+    "gatsby-remark-copy-linked-files": "^2.0.9",
+    "gatsby-remark-images": "^3.0.3",
+    "gatsby-remark-prismjs": "^3.2.4",
+    "gatsby-remark-responsive-iframe": "^2.0.9",
+    "gatsby-remark-smartypants": "^2.0.8",
+    "gatsby-source-filesystem": "^2.0.20",
     "gatsby-source-unsplash": "^1.1.0",
-    "gatsby-transformer-remark": "^1.7.44",
-    "gatsby-transformer-sharp": "^1.6.27",
-    "lodash": "^4.17.10"
+    "gatsby-transformer-remark": "^2.2.5",
+    "gatsby-transformer-sharp": "^2.1.13",
+    "lodash": "^4.17.11",
+    "node-sass": "^4.11.0",
+    "prismjs": "^1.15.0",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-helmet": "^5.2.0"
   },
   "devDependencies": {
     "gh-pages": "^0.12.0",
-    "prettier": "^1.14.2"
+    "prettier": "^1.16.4"
   },
   "homepage": "https://russelljanderson.com",
   "keywords": [
@@ -43,13 +48,14 @@
     "url": "git+https://github.com/vacas5/blog"
   },
   "scripts": {
-    "dev": "gatsby develop",
+    "dev": "gatsby develop -p 3720",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "develop": "gatsby develop",
     "build": "gatsby build",
     "deploy": "gatsby build && gh-pages -d public -b master",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
+    "serve": "gatsby serve"
   }
 }

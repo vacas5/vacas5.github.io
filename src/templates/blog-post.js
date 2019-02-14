@@ -1,21 +1,19 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
 import get from 'lodash/get'
 import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 
-class BlogPostTemplate extends React.Component {
-  constructor(props, context) {
-    super(props)
+import Layout from '../components/Layout'
 
-    context.changeBanner(props.data.unsplashPhoto.urls.full)
-  }
-  render() {
-    const post = this.props.data.markdownRemark
-    const siteMetadata = get(this.props, 'data.site.siteMetadata')
-    const unsplashPhoto = this.props.data.unsplashPhoto
+const BlogPostTemplate = ({ data, location }) => {
+  const post = data.markdownRemark
+  const siteMetadata = get(data, 'site.siteMetadata')
+  const unsplashPhoto = data.unsplashPhoto
+  const banner = get(data, 'unsplashPhoto.urls.full')
 
-    return (
+  return (
+    <Layout location={location} banner={banner}>
       <div className="blog_post">
         <Helmet title={`${post.frontmatter.title} | ${siteMetadata.title}`}>
           <meta name="description" content={post.excerpt} />
@@ -52,12 +50,13 @@ class BlogPostTemplate extends React.Component {
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
-    )
-  }
+    </Layout>
+  )
 }
 
-BlogPostTemplate.contextTypes = {
-  changeBanner: PropTypes.func,
+BlogPostTemplate.propTypes = {
+  data: PropTypes.object,
+  location: PropTypes.object,
 }
 
 export default BlogPostTemplate
