@@ -9,9 +9,8 @@ import Layout from '../components/Layout'
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteMetadata = get(data, 'site.siteMetadata')
-  const unsplashPhoto = data.unsplashPhoto
+  const unsplashPhoto = get(data, "unsplashPhoto")
   const banner = get(data, 'unsplashPhoto.urls.full')
-
   return (
     <Layout location={location} banner={banner}>
       <div className="blog_post">

@@ -2,7 +2,7 @@
 title: Updating an ejected Create React App
 date: "2018-04-26T22:40:32.169Z"
 path: "/updating-create-react-app/"
-unsplash: 'CrnPTz6f-tE'
+unsplash: 'FZWivbri0Xk'
 ---
 
 When I started working with React in September of 2016 [Create React App](https://github.com/facebook/create-react-app) was only a few months old. It appealed to me immediately. I'd been developing in the Angular 1.x world, and had exactly zero experience writing ES6 or configuring webpack, let alone writing React applications. I wanted to dig into React foremost, not attempt scaffolding an app. CRA seemed a perfect solution even in its nascent stage.
