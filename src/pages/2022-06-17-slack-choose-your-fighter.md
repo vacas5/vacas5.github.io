@@ -2,7 +2,7 @@
 title: Using Slack - Choose Your Fighter
 date: "2022-06-17T22:40:32.169Z"
 path: "/slack-choose-your-fighter/"
-unsplash: "5N75xeV9x9Q"
+unsplash: "5QIPyaDT1V0"
 ---
 
 It’s a funny thing. We all use this tool to communicate, but we rarely spend time setting rules and expectations regarding how it’s used. With Slack this can be particularly dangerous for an organization because it defaults to distraction and frenzy.
