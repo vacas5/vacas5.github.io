@@ -1,37 +1,36 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
-import PropTypes from 'prop-types'
+import React from "react";
+import Link from "gatsby-link";
+import Helmet from "react-helmet";
+import PropTypes from "prop-types";
 
-import '../sass/main.scss'
-import Bio from './Bio'
-import twitter from '../images/icon_Twitter-White.png'
-import linkedIn from '../images/linkedin-icon_white.png'
-import gitHub from '../images/white-github-512.png'
+import "../sass/main.scss";
+import Bio from "./Bio";
+import linkedIn from "../images/linkedin-icon_white.png";
+import gitHub from "../images/white-github-512.png";
 
 const Layout = ({
   location,
   children,
-  banner = 'https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/nashjs-january.jpeg',
-  className = '',
+  banner = "https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/nashjs-january.jpeg",
+  className = "",
 }) => {
-  let header
-  if (location.pathname === '/') {
+  let header;
+  if (location.pathname === "/") {
     header = (
       <h1 className="title">
-        <Link to={'/'}>Russell J. Anderson</Link>
+        <Link to={"/"}>Russell J. Anderson</Link>
       </h1>
-    )
+    );
   } else {
     header = (
       <h3 className="title">
-        <Link to={'/'}>Russell J. Anderson</Link>
+        <Link to={"/"}>Russell J. Anderson</Link>
       </h3>
-    )
+    );
   }
   const bannerStyle = {
     backgroundImage: `url(${banner})`,
-  }
+  };
   return (
     <div className={className}>
       <Helmet>
@@ -49,9 +48,6 @@ const Layout = ({
       <div className="header_wrapper">
         {header}
         <div className="social_icons">
-          <a href="https://twitter.com/RealRealRuss">
-            <img src={twitter} alt="Twitter logo" />
-          </a>
           <a href="https://www.linkedin.com/in/russelljanderson">
             <img src={linkedIn} alt="LinkedIn logo" />
           </a>
@@ -67,14 +63,14 @@ const Layout = ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node,
   location: PropTypes.object,
   banner: PropTypes.string,
   className: PropTypes.string,
-}
+};
 
-export default Layout
+export default Layout;
