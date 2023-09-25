@@ -1,0 +1,50 @@
+---
+title: Promoting Thoughtful Responses in your Org
+date: "2023-05-09T22:40:32.169Z"
+path: "/promoting-thoughtful-responses/"
+unsplash: ""
+---
+
+I was discussing [this article](https://abe-winter.github.io/plea's/help/2018/02/11/slack.html) with a few colleagues in Nashville, and one of them said this and I thought it was profound:
+
+"I think an issue with Slack or any instant messaging platform is that it encourages immediate responses rather than thoughtful responses."
+
+I've written about Slack before but I am turning back to the idea of "thoughtful communication" as I prepare to present to my fellow managers about asynchronous communication. While I believe strong asynchronous communication processes as vital for any distributed org, what might be a prerequisite to that is that the org values and greatly encourages _thoughtful responses_ over _immediate responses_.
+
+This is related but not restricted to async comms. Synchronous comms such as meetings can be thoughtful, too. And asynchronous comms are often curt, vague, or unclear. In my mind this is a value that needs to be in place at an organization before a major effort to go more asynchronous.
+
+What can we do as managers or individual contributors to exhort our teams towards thoughtful communication.
+
+## Why is thoughtful better?
+
+- Do we care about the right answer or what someone thinks is the answer off the top of their head? - Relentless
+- It's more inclusive - Do we have a level playing field or do certain people who make themselves available the ones who will always rise to the top? - Team Always
+- giving people time to reflect rather than just recall
+- provides people the opportunity to learn and share those learnings - champions of change
+
+## How do we promote this as managers?
+
+- Thoughtful responses begin with thoughtful questions. Controlling how we ask, when and where.
+- Promoting self-discovery. Not relying on others to be our wikipedia but encouraging everyone to exhaust self discovery options first (docs, wiki, jira, the web)
+- Aligning on where and when communication happens and the expectations around clearing messages
+- preparation is key
+- the way we run meetings and present information
+
+## Obstacles
+
+- Slack and availability. Slack is not our friend!
+- Availability as a metric: "I think it does this"
+- Managers and the need for immediacy because we don't have any margin ourselves to be thoughtful, answer questions in meetings,
+- Information is not discoverable
+- Immediacy _feels_ productive. But is it?
+
+Thoughtful responses start with thoughtful questions
+Giving space and time
+
+## Questions for managers
+
+- Find three recent examples of when someone directly messaged or @ mentioned you for a response on something that was not really urgent. How did that make you feel? How were you able to respond? Now find three examples of when you DMd someone for something non-urgent.
+- Read this over the top (but thought provoking) hot take on Slack from a few years ago (5 min read)
+- Read over this summary of async communication I put together for engineering (5 min read)
+
+Avoid answers with "I think" or "I believe so". Why can't you confirm? Is there something you could just look up and give a more concrete answer?
