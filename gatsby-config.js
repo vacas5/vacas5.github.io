@@ -1,12 +1,13 @@
-const dotenv = require('dotenv')
-dotenv.config()
+const dotenv = require("dotenv");
+dotenv.config();
 
 module.exports = {
   siteMetadata: {
     title: "Russell J. Anderson, Web Developer",
     author: "Russell J. Anderson",
     url: "http://russelljanderson.com",
-    description: "A blog on web development, product development, javascript, python, React, Django, et al",
+    description:
+      "A blog on web development, product development, javascript, python, React, Django, et al",
   },
   plugins: [
     {
@@ -41,12 +42,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `${process.env.GOOGLE_ANALYTICS_ID}`,
-      },
-    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
@@ -59,13 +54,11 @@ module.exports = {
       resolve: `gatsby-source-unsplash`,
       options: {
         appId: `${process.env.UNSPLASH_APP_ID}`,
-        collections: [
-          `1578508`
-        ],
-        perPage: `50`
+        collections: [`1578508`],
+        perPage: `50`,
       },
     },
     `gatsby-plugin-twitter`,
-    `gatsby-plugin-meta-redirect` // make sure to put last in array
+    `gatsby-plugin-meta-redirect`, // make sure to put last in array
   ],
-}
+};

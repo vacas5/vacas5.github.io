@@ -11,9 +11,8 @@ const Bio = () => {
         />
       </p>
       <p>
-        I am a Web Developer in Nashville, Tennessee, working for{" "}
-        <a href="https://d2iq.com">D2iQ</a>. I love my family, my church, the
-        local sports teams, and adverbs.
+        I am a Software Engineer in Nashville, Tennessee. I love my family, my
+        church, the local sports teams, and adverbs.
       </p>
       <blockquote className="main_quote">
         Perfection is achieved, not when there is nothing more to add, but when
