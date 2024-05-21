@@ -170,10 +170,6 @@ blockquote {
     margin-top: 3rem;
 }
 
-.button, html .button {
-    @extend #{$all-buttons};
-}
-
 .mobile_photo {
     margin: -1rem -1rem 0;
     @include media($medium-screen-up) {
