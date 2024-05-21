@@ -1,15 +1,15 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import get from 'lodash/get'
-import Helmet from 'react-helmet'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import React from "react";
+import Link from "gatsby-link";
+import get from "lodash/get";
+import Helmet from "react-helmet";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
 
-import Layout from '../components/Layout'
+import Layout from "../components/Layout";
 
 const BlogIndex = ({ data, location }) => {
-  const siteMetadata = get(data, 'site.siteMetadata')
-  const posts = get(data, 'allMarkdownRemark.edges')
+  const siteMetadata = get(data, "site.siteMetadata");
+  const posts = get(data, "allMarkdownRemark.edges");
 
   return (
     <Layout location={location}>
@@ -29,9 +29,9 @@ const BlogIndex = ({ data, location }) => {
         <meta name="twitter:image:alt" content={siteMetadata.title} />
       </Helmet>
       <h2 className="subtitle">Posts</h2>
-      {posts.map(post => {
-        if (post.node.path !== '/404/') {
-          const title = get(post, 'node.frontmatter.title') || post.node.path
+      {posts.map((post) => {
+        if (post.node.path !== "/404/") {
+          const title = get(post, "node.frontmatter.title") || post.node.path;
           return (
             <div key={post.node.frontmatter.path}>
               <h3 className="status">
@@ -40,20 +40,20 @@ const BlogIndex = ({ data, location }) => {
               <small>{post.node.frontmatter.date}</small>
               <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
             </div>
-          )
+          );
         }
-        return false
+        return false;
       })}
     </Layout>
-  )
-}
+  );
+};
 
 BlogIndex.propTypes = {
   data: PropTypes.object,
   location: PropTypes.object,
-}
+};
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query IndexQuery {
@@ -71,12 +71,10 @@ export const pageQuery = graphql`
           frontmatter {
             path
             date(formatString: "DD MMMM, YYYY")
-          }
-          frontmatter {
             title
           }
         }
       }
     }
   }
-`
+`;
