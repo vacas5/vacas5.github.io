@@ -1,0 +1,27 @@
+name: Continuous Deployment
+env:
+  NODE_VERSION: 18
+  UNSPLASH_APP_ID: ${{ secrets.UNSPLASH }}
+on:
+  workflow_run:
+    workflows: ["Playwright Tests"]
+    types: [completed]
+    branches:
+      - develop
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+    - name: Install dependencies
+      run: npm ci
+    - name: Deploy with gh-pages
+      run: |
+        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
