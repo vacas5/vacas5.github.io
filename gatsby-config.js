@@ -55,7 +55,7 @@ module.exports = {
     {
       resolve: `gatsby-source-unsplash`,
       options: {
-        appId: `${process.env.UNSPLASH_APP_ID}`,
+        clientId: `${process.env.UNSPLASH_APP_ID}`,
         collections: [`1578508`],
         perPage: `50`,
       },

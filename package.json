@@ -22,7 +22,7 @@
     "gatsby-remark-responsive-iframe": "^3.2.0",
     "gatsby-remark-smartypants": "^3.2.0",
     "gatsby-source-filesystem": "^3.15.0",
-    "gatsby-source-unsplash": "1.0.3",
+    "gatsby-source-unsplash": "^2.0.0",
     "gatsby-transformer-remark": "^3.2.0",
     "gatsby-transformer-sharp": "^3.15.0",
     "lodash": "^4.17.21",
