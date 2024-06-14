@@ -3,11 +3,15 @@ dotenv.config();
 
 module.exports = {
   siteMetadata: {
-    title: "Russell J. Anderson, Web Developer",
+    title: "Russell J. Anderson, Software Engineer",
     author: "Russell J. Anderson",
-    url: "http://russelljanderson.com",
+    siteUrl: "http://russelljanderson.com",
     description:
-      "A blog on web development, product development, javascript, python, React, Django, et al",
+      "A blog on software development, engineering leadership, product development, javascript, python, React, Django, et al",
+    favicon:
+      "https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/RJA-Badge.png",
+    image:
+      "https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/nashjs-january.jpeg",
   },
   plugins: [
     {
@@ -43,7 +47,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {

@@ -1,6 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
-import Helmet from "react-helmet";
+import { Link } from "gatsby";
 import PropTypes from "prop-types";
 
 import "../sass/main.scss";
@@ -8,12 +7,7 @@ import Bio from "./Bio";
 import linkedIn from "../images/linkedin-icon_white.png";
 import gitHub from "../images/white-github-512.png";
 
-const Layout = ({
-  location,
-  children,
-  banner = "https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/nashjs-january.jpeg",
-  className = "",
-}) => {
+const Layout = ({ location, children, banner, className = "" }) => {
   let header;
   if (location.pathname === "/") {
     header = (
@@ -33,17 +27,6 @@ const Layout = ({
   };
   return (
     <div className={className}>
-      <Helmet>
-        <link
-          rel="icon"
-          type="image/png"
-          href="https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/RJA-Badge.png"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Russell J. Anderson" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@simplyagree" />
-      </Helmet>
       <div className="banner" style={bannerStyle} />
       <div className="header_wrapper">
         {header}
