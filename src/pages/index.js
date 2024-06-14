@@ -1,7 +1,6 @@
 import React from "react";
-import Link from "gatsby-link";
+import { Link } from "gatsby";
 import get from "lodash/get";
-import Helmet from "react-helmet";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
@@ -12,22 +11,7 @@ const BlogIndex = ({ data, location }) => {
   const posts = get(data, "allMarkdownRemark.edges");
 
   return (
-    <Layout location={location}>
-      <Helmet title={`Posts | ${siteMetadata.title}`}>
-        <meta name="description" content={siteMetadata.description} />
-        <meta property="og:title" content={siteMetadata.title} />
-        <meta name="og:description" content={siteMetadata.description} />
-        <meta property="og:url" content={siteMetadata.url} />
-        <meta
-          property="og:image"
-          content="https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/sitecap.jpg"
-        />
-        <meta
-          name="twitter:image"
-          content="https://s3-us-west-2.amazonaws.com/russelljanderson-dev/static/sitecap.jpg"
-        />
-        <meta name="twitter:image:alt" content={siteMetadata.title} />
-      </Helmet>
+    <Layout location={location} banner={siteMetadata.image}>
       <h2 className="subtitle">Posts</h2>
       {posts.map((post) => {
         if (post.node.path !== "/404/") {
@@ -55,16 +39,38 @@ BlogIndex.propTypes = {
 
 export default BlogIndex;
 
+export const Head = ({ data }) => {
+  const siteMetadata = get(data, "site.siteMetadata");
+  return (
+    <>
+      <title>{`Posts | ${siteMetadata.title}`}</title>
+      <meta name="description" content={siteMetadata.description} />
+      <link rel="icon" type="image/png" href={siteMetadata.favicon} />
+      <meta property="og:title" content={siteMetadata.title} />
+      <meta name="og:description" content={siteMetadata.description} />
+      <meta property="og:url" content={siteMetadata.url} />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content={siteMetadata.author} />
+      <meta property="og:image" content={siteMetadata.image} />
+      <meta name="twitter:image" content={siteMetadata.image} />
+      <meta name="twitter:image:alt" content={siteMetadata.title} />
+    </>
+  );
+};
+
 export const pageQuery = graphql`
   query IndexQuery {
     site {
       siteMetadata {
         title
-        url
+        url: siteUrl
         description
+        favicon
+        author
+        image
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
           excerpt

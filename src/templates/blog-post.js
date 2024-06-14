@@ -1,31 +1,17 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import get from 'lodash/get'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import React from "react";
+import get from "lodash/get";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
 
-import Layout from '../components/Layout'
+import Layout from "../components/Layout";
 
 const BlogPostTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
-  const siteMetadata = get(data, 'site.siteMetadata')
-  const unsplashPhoto = get(data, "unsplashPhoto")
-  const banner = get(data, 'unsplashPhoto.urls.full')
+  const post = data.markdownRemark;
+  const unsplashPhoto = get(data, "unsplashPhoto");
+  const banner = get(data, "unsplashPhoto.urls.full");
   return (
     <Layout location={location} banner={banner}>
       <div className="blog_post">
-        <Helmet title={`${post.frontmatter.title} | ${siteMetadata.title}`}>
-          <meta name="description" content={post.excerpt} />
-          <meta property="og:title" content={post.frontmatter.title} />
-          <meta name="og:description" content={siteMetadata.description} />
-          <meta
-            property="og:url"
-            content={`${siteMetadata.url}${post.frontmatter.path}`}
-          />
-          <meta property="og:image" content={unsplashPhoto.urls.small} />
-          <meta name="twitter:image" content={unsplashPhoto.urls.small} />
-          <meta name="twitter:image:alt" content={siteMetadata.title} />
-        </Helmet>
         <div className="mobile_photo">
           <img
             src={unsplashPhoto.urls.regular}
@@ -35,10 +21,10 @@ const BlogPostTemplate = ({ data, location }) => {
         <p className="photo_credit">
           <small>
             <em>
-              Photo by{' '}
+              Photo by{" "}
               <a href={unsplashPhoto.user.links.html}>
                 {unsplashPhoto.user.name}
-              </a>{' '}
+              </a>{" "}
               from the fine service <a href="http://unsplash.com">Unsplash</a>.
             </em>
           </small>
@@ -50,15 +36,39 @@ const BlogPostTemplate = ({ data, location }) => {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
-  )
-}
+  );
+};
 
 BlogPostTemplate.propTypes = {
   data: PropTypes.object,
   location: PropTypes.object,
-}
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
+
+export const Head = ({ data }) => {
+  const post = data.markdownRemark;
+  const siteMetadata = get(data, "site.siteMetadata");
+  const unsplashPhoto = get(data, "unsplashPhoto");
+  return (
+    <>
+      <title>{`${post.frontmatter.title} | ${siteMetadata.title}`}</title>
+      <meta name="description" content={post.excerpt} />
+      <link rel="icon" type="image/png" href={siteMetadata.favicon} />
+      <meta property="og:title" content={post.frontmatter.title} />
+      <meta name="og:description" content={post.excerpt} />
+      <meta
+        property="og:url"
+        content={`${siteMetadata.url}${post.frontmatter.path}`}
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content={siteMetadata.author} />
+      <meta property="og:image" content={unsplashPhoto.urls.small} />
+      <meta name="twitter:image" content={unsplashPhoto.urls.small} />
+      <meta name="twitter:image:alt" content={siteMetadata.title} />
+    </>
+  );
+};
 
 export const pageQuery = graphql`
   query BlogPostByPath($slug: String!, $unsplash: String!) {
@@ -66,6 +76,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        favicon
       }
     }
     markdownRemark(frontmatter: { path: { eq: $slug } }) {
@@ -94,4 +105,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
