@@ -54,6 +54,12 @@ export const Head = ({ data }) => {
       <meta property="og:image" content={siteMetadata.image} />
       <meta name="twitter:image" content={siteMetadata.image} />
       <meta name="twitter:image:alt" content={siteMetadata.title} />
+      <script
+        defer
+        src="https://unpkg.com/@tinybirdco/flock.js"
+        data-host="https://api.tinybird.co"
+        data-token={process.env.GATSBY_TINYBIRD_TOKEN}
+      ></script>
     </>
   );
 };
