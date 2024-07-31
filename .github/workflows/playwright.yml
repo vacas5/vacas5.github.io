@@ -1,7 +1,7 @@
 name: Playwright Tests
 env:
   NODE_VERSION: 18
-  UNSPLASH_APP_ID: ${{ secrets.UNSPLASH }}
+  UNSPLASH_APP_ID: ${{ vars.UNSPLASH_TOKEN }}
 on:
   push:
     branches: [ develop ]
