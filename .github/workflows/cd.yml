@@ -3,6 +3,7 @@ env:
   NODE_VERSION: 18
   UNSPLASH_APP_ID: ${{ vars.UNSPLASH_TOKEN }}
   GATSBY_TINYBIRD_TOKEN: ${{ vars.TINYBIRD_TOKEN }}
+  GATSBY_TINYBIRD_DATASOURCE_TOKEN: ${{ vars.TINYBIRD_DATASOURCE_TOKEN }}
 on:
   workflow_run:
     workflows: ["Playwright Tests"]

@@ -25,16 +25,43 @@ const Layout = ({ location, children, banner, className = "" }) => {
   const bannerStyle = {
     backgroundImage: `url(${banner})`,
   };
+
+  const handleLinkClick = (network) => {
+    if (process.env.GATSBY_TINYBIRD_DATASOURCE_TOKEN) {
+      fetch("https://api.tinybird.co/v0/events?name=social_link_clicks", {
+        method: "POST",
+        body: JSON.stringify({
+          timestamp: new Date(),
+          network,
+        }),
+        headers: {
+          Authorization: `Bearer ${process.env.GATSBY_TINYBIRD_DATASOURCE_TOKEN}`,
+        },
+      });
+    }
+  };
+
   return (
     <div className={className}>
       <div className="banner" style={bannerStyle} />
       <div className="header_wrapper">
         {header}
         <div className="social_icons">
-          <a href="https://www.linkedin.com/in/russelljanderson">
+          <a
+            href="https://www.linkedin.com/in/russelljanderson"
+            onClick={() => {
+              handleLinkClick("LinkedIn");
+            }}
+          >
             <img src={linkedIn} alt="LinkedIn logo" />
           </a>
-          <a href="https://github.com/vacas5" className="github">
+          <a
+            href="https://github.com/vacas5"
+            className="github"
+            onClick={() => {
+              handleLinkClick("Github");
+            }}
+          >
             <img src={gitHub} alt="Octocat" />
           </a>
         </div>
