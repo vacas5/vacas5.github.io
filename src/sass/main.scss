@@ -81,6 +81,16 @@ body {
     }
 }
 
+.consulting_wrapper {
+    background-color: $white;
+    padding: 1rem;
+    min-height: 100vh;
+    @include media($large-screen-up) {
+        @include outer-container(75%);
+        padding: 2rem;
+    }
+}
+
 .content {
     margin-bottom: 3rem;
     @include media($large-screen-up) {

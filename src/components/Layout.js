@@ -67,7 +67,7 @@ const Layout = ({ location, children, banner, className = "" }) => {
         </div>
       </div>
       <div className="content_wrapper">
-        <div className="content">{children}</div>
+        <main className="content">{children}</main>
         <div className="positions">
           <Bio />
         </div>
