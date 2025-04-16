@@ -11,7 +11,7 @@ const Bio = () => {
         />
       </p>
       <p>
-        I am a Software Engineer in Nashville, Tennessee. I love my family, my
+        I am a Software Engineer and consultant in Nashville, Tennessee. I love my family, my
         church, the local sports teams, and adverbs.
       </p>
       <blockquote className="main_quote">
